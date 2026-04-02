@@ -1,0 +1,157 @@
+:root {
+  /* Premium Sweet & Light - Healthy Finances V2 */
+  --primary: #ff5e91; 
+  --primary-gradient: linear-gradient(135deg, #ff5e91 0%, #ff8fa3 100%);
+  --primary-glow: rgba(255, 94, 145, 0.3);
+  
+  --secondary: #6c5ce7;
+  --secondary-gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  --secondary-glow: rgba(108, 92, 231, 0.3);
+  
+  --accent: #ffbc6e;
+  --accent-gradient: linear-gradient(135deg, #ffbc6e 0%, #ffd4a1 100%);
+  
+  --bg-light: #fefafb;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 20px 50px rgba(255, 94, 145, 0.12);
+  
+  --text-main: #2d3436;
+  --text-dim: #636e72;
+  --error: #ff4757;
+  --success: #2ed573;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-main);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Blobs */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.5;
+  animation: float 20s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(100px, 50px) scale(1.2); }
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 120px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: 40px;
+    padding-left: 140px;
+    padding-bottom: 40px;
+  }
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: 32px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.glass-card:hover::before {
+  left: 100%;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 30px 60px rgba(255, 94, 145, 0.18);
+}
+
+.primary-button {
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: 20px;
+  padding: 18px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px var(--primary-glow);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+}
+
+.primary-button:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 15px 35px var(--primary-glow);
+}
+
+.input-field {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 16px 20px;
+  color: var(--text-main);
+  width: 100%;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.main-balance {
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, var(--text-main), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premium-header-gradient {
+  background: linear-gradient(180deg, #ff5e91 0%, #ff8fa3 100%);
+  color: white;
+}
