@@ -2,21 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   HiArrowTrendingDown, 
-  HiBanknotes, 
-  HiArrowRight
+  HiBanknotes
 } from 'react-icons/hi2';
 import api from '../services/api';
 import { useUIStore } from '../store/uiStore';
 
 const Dashboard: React.FC = () => {
   const [balance, setBalance] = useState<string>('0');
-  const [accounts, setAccounts] = useState<any[]>([]);
-  const [projection, setProjection] = useState<any>(null);
+  const [, setAccounts] = useState<any[]>([]);
+  const [, setProjection] = useState<any>(null);
   const [recentTransactions, setRecentTransactions] = useState<any[]>([]);
   const [upcomingPayments, setUpcomingPayments] = useState<any[]>([]);
-  const [monthsAhead, setMonthsAhead] = useState(1);
-  const [showProjection, setShowProjection] = useState(false);
-  const { openAddTransactionModal } = useUIStore();
+  const [monthsAhead ,] = useState(1);
+  const [,] = useState(false);
+  const { } = useUIStore();
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 768px)').matches);
 
@@ -122,7 +121,7 @@ const Dashboard: React.FC = () => {
       <div style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', gap: '30px' }}>
         {/* Próximos Pagos Section */}
         <section>
-          <h3 style={{ fontSize: '16px', fontWeight: 900, color: 'var(--text-main)', marginBottom: '15px', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '1px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <h3 style={{ fontSize: '16px', fontWeight: 900, marginBottom: '15px', color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '1px', display: 'flex', alignItems: 'center', gap: '10px' }}>
              Próximos Pagos
           </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>

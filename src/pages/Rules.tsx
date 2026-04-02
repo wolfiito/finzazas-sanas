@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import api from '../services/api';
-import { HiPlus, HiArrowPath, HiMiniClock, HiTrash, HiArrowPathRoundedSquare } from 'react-icons/hi2';
+import { HiPlus, HiArrowPath, HiTrash } from 'react-icons/hi2';
 
 const Rules: React.FC = () => {
   const [rules, setRules] = useState<any[]>([]);

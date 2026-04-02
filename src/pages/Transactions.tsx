@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import api from '../services/api';
-import { HiArrowUpCircle, HiArrowDownCircle, HiChevronLeft, HiChevronRight, HiArrowLeft, HiArrowTrendingDown } from 'react-icons/hi2';
+import { HiArrowUpCircle, HiChevronLeft, HiChevronRight, HiArrowLeft, HiArrowTrendingDown } from 'react-icons/hi2';
 
 const Transactions: React.FC = () => {
   const [transactions, setTransactions] = useState<any[]>([]);
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [ , ] = useState(new Date());
 
   useEffect(() => {
     const fetchTransactions = async () => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { HiLockClosed, HiEnvelope, HiSparkles } from 'react-icons/hi2';
+import { HiLockClosed, HiEnvelope } from 'react-icons/hi2';
 import { useAuthStore } from '../store/authStore';
 import api from '../services/api';
 

@@ -2,14 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { HiChartBar, HiBanknotes } from 'react-icons/hi2';
 import api from '../services/api';
-import { 
-  ResponsiveContainer, 
-  AreaChart, 
-  Area, 
-  XAxis, 
-  YAxis, 
-  Tooltip 
-} from 'recharts';
 
 const Future: React.FC = () => {
   const [projection, setProjection] = useState<any>(null);

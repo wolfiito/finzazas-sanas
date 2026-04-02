@@ -119,7 +119,7 @@ const Accounts: React.FC = () => {
             animate={{ opacity: 1 }}
             style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
           >
-            {accounts.map((account, index) => (
+            {accounts.map((account) => (
               <motion.div
                 key={account.id}
                 whileTap={{ scale: 0.98 }}
